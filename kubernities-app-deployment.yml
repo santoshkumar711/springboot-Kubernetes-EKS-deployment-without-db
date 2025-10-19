@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernities-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubernities-app
+  template:
+    metadata:
+      labels:
+        app: kubernities-app
+    spec:
+      containers:
+        - name: kubernities-app
+          image: santoshkumar711/kubernities-app:v1
+
+            
