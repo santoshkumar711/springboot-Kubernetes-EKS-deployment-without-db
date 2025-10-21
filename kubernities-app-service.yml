@@ -5,9 +5,8 @@ metadata:
 spec:
   selector:
     app: kubernities-app
-  type: NodePort         # LoadBalancer se NodePort me change kiya
+  type: LoadBalancer   # NodePort -> LoadBalancer
   ports:
     - name: http
-      port: 8080
-      targetPort: 8080
-      nodePort: 30080    # NodePort 30000-32767 ke beech
+      port: 8080        # External access port
+      targetPort: 8080  # Pod port
